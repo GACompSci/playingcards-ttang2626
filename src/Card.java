@@ -2,11 +2,14 @@ public class Card {
     private int cardValue;
     private int cardSuit;
     private String cardName;
+    private static int numCards = 0;
 
     public Card() {
         cardValue = 0;
         cardSuit =0;
         cardName = "Joker";
+        numCards++;
+   
     }
 
     public Card(int value, int suit) {
@@ -40,6 +43,8 @@ public class Card {
         } else {
             cardName = "invalid card";
         }
+        numCards++;
+      
 
     
     }
@@ -63,4 +68,10 @@ public class Card {
     public String toString(){
         return cardName;
     }
+
+    public static int getNumCards(){
+        return numCards;
+    }
+
+
 }
